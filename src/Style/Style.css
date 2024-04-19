@@ -1,0 +1,46 @@
+:root {
+    --blueColor: #008DDA;
+    --blueActiveColor: #29b4e2;
+    --redColor: #fa1717;  
+    --greyColor: #4b4a4a;
+}
+
+.not_found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+
+}
+
+.not_found p {
+    color: var(--whiteColor);
+    font-size: large;
+    font-weight: 800;
+}
+
+.NoAccessContainer {
+    display: "flex";
+    flex-direction: "column";
+    align-items: "start";
+    margin-top: 110px;
+    margin-left: 430px;
+    justify-content: "start";
+}
+
+
+
+/* For responsiveness  */
+@media only screen and (max-width: 720px) {
+    .NoAccessContainer {
+        margin: 200px;
+        padding: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 920px) {
+    .NoAccessContainer {
+        margin: 0px;
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bugdeto/static/css/main.e8984562.css",
+    "main.js": "/bugdeto/static/js/main.04077804.js",
+    "index.html": "/bugdeto/index.html",
+    "main.e8984562.css.map": "/bugdeto/static/css/main.e8984562.css.map",
+    "main.04077804.js.map": "/bugdeto/static/js/main.04077804.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8984562.css",
+    "static/js/main.04077804.js"
+  ]
+}

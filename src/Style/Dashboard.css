@@ -1,0 +1,157 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --blueColor: #008DDA;
+    --blueActiveColor: #29b4e2;
+    --redColor: #fa1717;  
+    --greyColor: #4b4a4a;
+    --backgroundGrey: rgba(244, 244, 244, 0.918)
+  
+}
+
+/* all styles  ---------------------------*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* body syles  */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(244, 244, 244, 0.918);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.main_dashboard{
+    background-color: rgba(244, 244, 244, 0.918);
+}
+
+.bugdet_summary {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bugdet_summary_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 15px;  
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;    
+}
+
+#main_dashboard {
+    padding: 20px;
+}
+
+
+
+/* for responsiveness */
+@media only screen and (max-width: 720px) {
+
+    body {
+        min-width: 360px;
+    }
+
+ 
+    .small_device {
+        display: none;
+    }
+
+
+    .hero_section {
+        font-size: .8rem;
+    }
+
+    .hire_text {
+        font-size: .7rem;
+        min-width: 130px;
+    }
+
+    .blog_item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+    
+    .stat_content span{
+        margin-left: 20px;
+    }   
+}
+
+/* 
+for ipods and tables */
+
+@media only screen and (max-width: 920px) {
+
+    body {
+        min-width: 360px;
+    }
+  
+
+    /* for services */
+    .service_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* for portfolio */
+
+    .portfolio_nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .portfolio_nav h1 {
+        font-size: 1rem;
+        margin: 0px;
+    }
+
+    .dashboard_content{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
+/* 
+  for dark mode */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--blueColor);
+        color: white;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: #ddd;
+        color: black;
+    }
+
+}
