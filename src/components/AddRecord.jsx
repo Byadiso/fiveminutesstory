@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import InputComponent from "./InputComonents/InputComponent";
-import "../Style/Blogs.css";
 import { createTransaction } from "../firebase/Transaction";
 import { isAuthenticated } from "../firebase/Authentication";
 

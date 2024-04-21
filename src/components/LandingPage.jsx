@@ -1,30 +1,124 @@
 import "../Style/LandingPage.css";
 import React, { useEffect, useState } from "react";
-import PaymentsIcon from '@mui/icons-material/Payments';
+import PaymentsIcon from "@mui/icons-material/Payments";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../firebase/Authentication";
-import { IconButton } from "@mui/material";
+import { Box, Fab, IconButton } from "@mui/material";
+import NavBar from "./Navbar";
+import HeroImage from "../images/Fiveminutes_hero.jpg";
+import ButtonForAction from "./InputComonents/ButtonForAction";
+import ImageCard from "./Modals/ImageCard";
+import storyImage1 from "../images/Fiveminutes_hero.jpg";
+import MicNoneIcon from '@mui/icons-material/MicNone';
+import Footer from "./Footer";
 
 function LandingPage() {
-  
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-
   useEffect(() => {
-  
     isAuthenticated(setIsLoggedIn);
-   
   }, []);
   return (
-    <div className="main_Landing">
-        <IconButton style={{ color: "white" }}>
-          <Link to="/Dashboard" style={{textDecoration:"none", color:"white"}}>
-          <PaymentsIcon fontSize="large" />
-          </Link>              
-             
-            </IconButton>
-            <h2>Bugdeto </h2>
+    <div>
+      <NavBar />
+      <div className="main_Landing">
+        <div className="Hero_section">
+          <ImageCard />
+        </div>
+        <div
+          className="Category_list"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
+          <h3>Featured</h3>
+          <h3>New & Notable</h3>
+          <h3>Trending</h3>
+          <h3>For You</h3>
+        </div>
+        <div className="Main_stories">
+          <h3>Featured</h3>
+          <div
+            className="Stories_container"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+          </div>
+        </div>
+        <h3>Story telling Genre</h3>
+
+        <div className="Story_genres" style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignContent: "center",
+          }}>
+          <p><MicNoneIcon/>Fiction</p>
+          <p><MicNoneIcon/> Non-fiction</p>
+          <p><MicNoneIcon/> Comedy</p>
+          <p><MicNoneIcon/> Drama</p>
+          <p><MicNoneIcon/> True Crime</p>
+          <p><MicNoneIcon/> Mystery</p>
+          <p><MicNoneIcon/> Biography</p>
+          <p><MicNoneIcon/> Sci-Fi</p>
+
+        </div>
+
+
+        <div className="Main_stories">
+          <h3>Recently played</h3>
+          <div
+            className="Stories_container"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

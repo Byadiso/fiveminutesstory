@@ -3,7 +3,7 @@
 }
 
 :root {
-    --blueColor: #008DDA;
+    --BackgroundColor: #111120;
 
 }
 
@@ -32,9 +32,10 @@ body {
 .main_Landing{    
     justify-content: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: var(--blueColor) ;
-    padding-top: 250px;
+    
 }
 
 

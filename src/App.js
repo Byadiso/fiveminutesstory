@@ -11,7 +11,6 @@ import AddRecord from "./components/AddRecord.jsx";
 import SuperBet from "./components/SuperBet.jsx";
 import Benefits from "./components/Benefits.jsx";
 import Motivation from "./components/Motivation.jsx";
-import Planning from "./components/Planning.jsx";
 
 
 function App() {
@@ -20,9 +19,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} /> 
-          <Route path="https://byadiso.github.io/budgeto/" element={<LandingPage />} />
-          
-          <Route path="/Plan" element={<Planning />} />             
+          <Route path="https://byadiso.github.io/budgeto/" element={<LandingPage />} />        
+                 
 
           <Route path="/bugdeto" element={<LandingPage />} />                         
 
