@@ -7,10 +7,7 @@ import NoMatch from "./components/NoMatch.jsx";
 import Logout from "./components/Logout.jsx";
 import Register from "./components/RegisterComponent.jsx";
 import Navbar from "./components/Navbar.jsx";
-import AddRecord from "./components/AddRecord.jsx";
-import SuperBet from "./components/SuperBet.jsx";
-import Benefits from "./components/Benefits.jsx";
-import Motivation from "./components/Motivation.jsx";
+
 
 
 function App() {
@@ -19,23 +16,13 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} /> 
-          <Route path="https://byadiso.github.io/budgeto/" element={<LandingPage />} />        
+          <Route path="https://byadiso.github.io/budgeto/" element={<LandingPage />} />   
                  
 
           <Route path="/bugdeto" element={<LandingPage />} />                         
 
           <Route path="/Dashboard" element={<Navbar />} />
-
-          <Route path="/Benefits" element={<Benefits />} />
-          <Route path="/Add" element={<AddRecord />} />
-          <Route path="/Reports" element={<Benefits />} />
-
-          <Route path="/Motivation" element={<Motivation />} />
-
-          
-
-          <Route path="/Super" element={<SuperBet />} />
-
+         
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
 
