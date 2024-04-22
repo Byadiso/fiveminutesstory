@@ -28,16 +28,16 @@ function LandingPage() {
         <div
           className="Category_list"
           style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignContent: "center",
+            // display: "flex",
+            // flexDirection: "row",
+            // justifyContent: "center",
+            // alignItems: "start",           
           }}
         >
-          <h3>Featured</h3>
-          <h3>New & Notable</h3>
-          <h3>Trending</h3>
-          <h3>For You</h3>
+          <h4>Featured</h4>
+          <h4>New & Notable</h4>
+          <h4>Trending</h4>
+          <h4>For You</h4>
         </div>
         <div className="Main_stories">
           <h3>Featured</h3>

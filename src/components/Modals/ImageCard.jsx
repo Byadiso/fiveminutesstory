@@ -9,15 +9,17 @@ function ImageCard() {
     backgroundImage: `url(${HeroImage})`,
     backgroundSize: 'cover', // Cover the entire area of the div
     backgroundPosition: 'center', // Center the background image
-    height: '100vh', // Set a full viewport height
+    height: '60vh', // Set a full viewport height
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     color: 'white', 
     textShadow: '2px 2px 8px rgba(0,0,0,0.7)', 
-    padding: '20px', 
-  };
+    padding: '70px', 
+    marginTop: '20px',
+    borderRadius: "10px",    
+    };
 
   return (
     <div className="Hero_section" style={heroStyle}>
