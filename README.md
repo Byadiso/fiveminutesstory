@@ -1,5 +1,6 @@
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ac2c8eeb-7293-489f-a00b-6c4808240c71/deploy-status)](https://app.netlify.com/sites/fiveminutesstory/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c6e0342e-43de-490a-8be3-f0b13b41a84c/deploy-status)](https://app.netlify.com/sites/fiveminutesstory/deploys)
+
 
 # five minutes story
 
