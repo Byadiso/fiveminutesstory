@@ -1,19 +1,20 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Tooltip from '@mui/material/Tooltip';
-import PersonAdd from '@mui/icons-material/PersonAdd';
-import Settings from '@mui/icons-material/Settings';
-import Logout from '@mui/icons-material/Logout';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import MicNoneIcon from '@mui/icons-material/MicNone';
-import SearchInput from './InputComonents/SearchInput';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Tooltip from "@mui/material/Tooltip";
+import PersonAdd from "@mui/icons-material/PersonAdd";
+import Settings from "@mui/icons-material/Settings";
+import Logout from "@mui/icons-material/Logout";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import MicNoneIcon from "@mui/icons-material/MicNone";
+import SearchInput from "./InputComonents/SearchInput";
+import Colors from "../Style/Colors.js";
 
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -25,92 +26,117 @@ export default function NavBar() {
     setAnchorEl(null);
   };
   return (
-    <div style={{display:"flex",flexDirection:"row",justifyContent:"end", alignItems:"center"}}>
-      
-      <h4 style={{ minWidth: 100, marginRight:"600px" }}>Five Minutes Story</h4>     
-      
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "end",
+        alignItems: "center",
+        backgroundColor: Colors.BackgroundColor,
+      }}
+    >
+      <h4 style={{ minWidth: 100, marginRight: "600px" }}>
+        Five Minutes Story
+      </h4>
+
       <div>
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent:"left" }}>
-      <SearchInput/>
-      <MicNoneIcon />
-      <NotificationsNoneIcon />     
-        
-        <Tooltip title="Account settings">
-          <IconButton
-            onClick={handleClick}
-            size="small"
-            sx={{ ml: 2 }}
-            aria-controls={open ? 'account-menu' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-          >
-            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
-          </IconButton>
-        </Tooltip>
-      </Box>
-      <Menu
-        anchorEl={anchorEl}
-        id="account-menu"
-        open={open}
-        onClose={handleClose}
-        onClick={handleClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            overflow: 'visible',
-            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-            mt: 1.5,
-            '& .MuiAvatar-root': {
-              width: 32,
-              height: 32,
-              ml: -0.5,
-              mr: 1,
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            textAlign: "center",
+            justifyContent: "left",
+          }}
+        >
+          <SearchInput />
+          <MicNoneIcon sx={{            
+            backgroundColor: Colors.WeakBackgroundColor,
+            margin:"7px",
+            padding:"2px",
+            borderRadius:"5px", 
+          }}/>
+          <NotificationsNoneIcon sx={{            
+            backgroundColor: Colors.WeakBackgroundColor,
+            margin:"7px",
+            padding:"2px",
+            borderRadius:"5px",    
+          }}/>
+
+          <Tooltip title="Account settings">
+            <IconButton
+              onClick={handleClick}
+              size="small"
+              sx={{ ml: 2 }}
+              aria-controls={open ? "account-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+            >
+              <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+            </IconButton>
+          </Tooltip>
+        </Box>
+        <Menu
+          anchorEl={anchorEl}
+          id="account-menu"
+          open={open}
+          onClose={handleClose}
+          onClick={handleClose}
+          PaperProps={{
+            elevation: 0,
+            sx: {
+              overflow: "visible",
+              filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+              mt: 1.5,
+              "& .MuiAvatar-root": {
+                width: 32,
+                height: 32,
+                ml: -0.5,
+                mr: 1,
+              },
+              "&::before": {
+                content: '""',
+                display: "block",
+                position: "absolute",
+                top: 0,
+                right: 14,
+                width: 10,
+                height: 10,
+                bgcolor: "background.paper",
+                transform: "translateY(-50%) rotate(45deg)",
+                zIndex: 0,
+              },
             },
-            '&::before': {
-              content: '""',
-              display: 'block',
-              position: 'absolute',
-              top: 0,
-              right: 14,
-              width: 10,
-              height: 10,
-              bgcolor: 'background.paper',
-              transform: 'translateY(-50%) rotate(45deg)',
-              zIndex: 0,
-            },
-          },
-        }}
-        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-      >
-        <MenuItem onClick={handleClose}>
-          <Avatar /> Profile
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Avatar /> My account
-        </MenuItem>
-        <Divider />
-        <MenuItem onClick={handleClose}>
-          <ListItemIcon>
-            <PersonAdd fontSize="small" />
-          </ListItemIcon>
-          Add another account
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <ListItemIcon>
-            <Settings fontSize="small" />
-          </ListItemIcon>
-          Settings
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <ListItemIcon>
-            <Logout fontSize="small" />
-          </ListItemIcon>
-          Logout
-        </MenuItem>
-      </Menu>
+          }}
+          transformOrigin={{ horizontal: "right", vertical: "top" }}
+          anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+        >
+          <MenuItem onClick={handleClose}>
+            <Avatar /> Profile
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <Avatar /> My account
+          </MenuItem>
+          <Divider />
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <PersonAdd fontSize="small" />
+            </ListItemIcon>
+            Add another account
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <Settings fontSize="small" />
+            </ListItemIcon>
+            Settings
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <Logout fontSize="small" />
+            </ListItemIcon>
+            Logout
+          </MenuItem>
+        </Menu>
       </div>
-      
     </div>
   );
 }

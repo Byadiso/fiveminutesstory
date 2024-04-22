@@ -1,9 +1,9 @@
 :root {
 
-    --whiteColor: #ffffff;
-    --error: rgb(204, 14, 14);
-    --blueColor: #008DDA;
-    --blueActiveColor: #29b4e2;
+    --ButtongColor: #2816E3;
+    --WeakBackgroundColor: #242445;    
+    --BackgroundColor: #111120;
+    --TextColor: #8A87B1;
 }
 
 /* all styles  ---------------------------*/

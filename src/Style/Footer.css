@@ -5,10 +5,10 @@
 
 :root {
 
-    --blackColorHeader: rgb(0, 0, 0);
-    --blackColor: #02090be3;
-    --whiteColor: #ffffff;
-    --error: rgb(204, 14, 14);
+    --ButtongColor: #2816E3;
+    --WeakBackgroundColor: #242445;    
+    --BackgroundColor: #111120;
+    --TextColor: #8A87B1;
 }
 
 /* all styles  ---------------------------*/
@@ -23,9 +23,8 @@
 }
 
 
-footer {
-    
-    /* or absolute, depending on your layout */
+footer {   
+   
     bottom: 0;
     left: 0;
     width: 100%;
@@ -34,8 +33,17 @@ footer {
     align-items: center;
     flex-direction: column;
     background: var(--blackColor);
-    color: var(--whiteColor);
-    /* padding: 5px; */
+    color: var(--whiteColor);  
+}
+
+.quick_menu p{
+    margin-left: 60px;
+    padding: 20px;
+    color: var(--TextColor);
+}
+
+._menu p:hover{
+    cursor:pointer
 }
 
 footer div {

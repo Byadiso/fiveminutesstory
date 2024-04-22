@@ -1,16 +1,16 @@
 import "../Style/LandingPage.css";
 import React, { useEffect, useState } from "react";
-import PaymentsIcon from "@mui/icons-material/Payments";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../firebase/Authentication";
-import { Box, Fab, IconButton } from "@mui/material";
 import NavBar from "./Navbar";
-import HeroImage from "../images/Fiveminutes_hero.jpg";
-import ButtonForAction from "./InputComonents/ButtonForAction";
 import ImageCard from "./Modals/ImageCard";
 import storyImage1 from "../images/Fiveminutes_hero.jpg";
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import Footer from "./Footer";
+import BookIcon from '@mui/icons-material/Book';
+import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import SearchIcon from "@mui/icons-material/Search";
 
 function LandingPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -74,14 +74,14 @@ function LandingPage() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
-            alignContent: "center",
+            alignItems: "center",
           }}>
-          <p><MicNoneIcon/>Fiction</p>
+          <p><BookIcon/>Fiction</p>
           <p><MicNoneIcon/> Non-fiction</p>
-          <p><MicNoneIcon/> Comedy</p>
-          <p><MicNoneIcon/> Drama</p>
+          <p><SentimentSatisfiedAltIcon/> Comedy</p>
+          <p><FavoriteBorderIcon/> Drama</p>
           <p><MicNoneIcon/> True Crime</p>
-          <p><MicNoneIcon/> Mystery</p>
+          <p><SearchIcon/> Mystery</p>
           <p><MicNoneIcon/> Biography</p>
           <p><MicNoneIcon/> Sci-Fi</p>
 

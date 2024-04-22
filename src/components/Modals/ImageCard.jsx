@@ -2,6 +2,7 @@ import React from 'react';
 import HeroImage from '../../images/Fiveminutes_hero.jpg'; 
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
+import Colors from '../../Style/Colors';
 
 function ImageCard() {
   const heroStyle = {
@@ -26,7 +27,7 @@ function ImageCard() {
         help you wake up on the right side of the bed
       </p>
       <Box sx={{ "& > :not(style)": { m: 1 } }}>
-        <Fab variant="extended" size="medium" color="primary">
+        <Fab variant="extended" size="medium" sx={{backgroundColor:Colors.ButtonColor, color:Colors.WhiteColor}}>
           Play
         </Fab>
       </Box>
