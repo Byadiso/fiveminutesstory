@@ -7,6 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import Colors from "../../Style/Colors";
+import { Link } from "react-router-dom";
 
 export default function SearchInput() {
   return (
@@ -22,10 +23,13 @@ export default function SearchInput() {
         InputProps={{
           startAdornment: (
             <InputAdornment position="start"  >
-              <SearchIcon sx={{
+            <Link to="/Search">
+            <SearchIcon sx={{
                 color: Colors.WhiteColor,   
                 marginLeft:"10px"             
               }}/>
+            </Link>
+              
             </InputAdornment>
           ),
         }}

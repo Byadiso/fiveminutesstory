@@ -15,6 +15,7 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import MicNoneIcon from "@mui/icons-material/MicNone";
 import SearchInput from "./InputComonents/SearchInput";
 import Colors from "../Style/Colors.js";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -35,9 +36,12 @@ export default function NavBar() {
         backgroundColor: Colors.BackgroundColor,
       }}
     >
+      <Link to="/" style={{ textDecoration:"none", color:Colors.WhiteColor}}>
       <h4 style={{ minWidth: 100, marginRight: "600px" }}>
         Five Minutes Story
       </h4>
+      </Link>
+      
 
       <div>
         <Box
@@ -110,25 +114,14 @@ export default function NavBar() {
           transformOrigin={{ horizontal: "right", vertical: "top" }}
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
+          
           <MenuItem onClick={handleClose}>
-            <Avatar /> Profile
-          </MenuItem>
-          <MenuItem onClick={handleClose}>
+            <Link to="/Profile" style={{textDecoration:"none", color:"Black", display:"flex", flexDirection:"row", alignItems:"center"}}>
             <Avatar /> My account
+            </Link>            
           </MenuItem>
-          <Divider />
-          <MenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <PersonAdd fontSize="small" />
-            </ListItemIcon>
-            Add another account
-          </MenuItem>
-          <MenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <Settings fontSize="small" />
-            </ListItemIcon>
-            Settings
-          </MenuItem>
+          <Divider />         
+          
           <MenuItem onClick={handleClose}>
             <ListItemIcon>
               <Logout fontSize="small" />

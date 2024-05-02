@@ -3,6 +3,7 @@ import HeroImage from '../../images/Fiveminutes_hero.jpg';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import Colors from '../../Style/Colors';
+import { Link } from 'react-router-dom';
 
 function ImageCard() {
   const heroStyle = {
@@ -30,7 +31,7 @@ function ImageCard() {
       </p>
       <Box sx={{ "& > :not(style)": { m: 1 } }}>
         <Fab variant="extended" size="medium" sx={{backgroundColor:Colors.ButtonColor, color:Colors.WhiteColor}}>
-          Play
+         <Link style={{backgroundColor:Colors.ButtonColor, color:Colors.WhiteColor, textDecoration:"none"}} to="/Playing"> Play</Link>
         </Fab>
       </Box>
     </div>

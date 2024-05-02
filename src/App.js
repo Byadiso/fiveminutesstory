@@ -6,7 +6,12 @@ import Login from "./components/Login.jsx";
 import NoMatch from "./components/NoMatch.jsx";
 import Logout from "./components/Logout.jsx";
 import Register from "./components/RegisterComponent.jsx";
-import Navbar from "./components/Navbar.jsx";
+
+import NowPlaying from "./components/NowPlaying.jsx";
+import Search from "./components/Search.jsx";
+import Profile from "./components/Profile.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+import Explore from "./components/Explore.jsx";
 
 
 
@@ -16,12 +21,18 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} /> 
-          <Route path="https://byadiso.github.io/budgeto/" element={<LandingPage />} />   
+          <Route path="https://byadiso.github.io/fiveminutesstory/" element={<LandingPage />} />   
                  
 
-          <Route path="/bugdeto" element={<LandingPage />} />                         
+          <Route path="/Dashboard" element={<Dashboard />} />
 
-          <Route path="/Dashboard" element={<Navbar />} />
+          <Route path="/Playing" element={<NowPlaying />} />  
+          <Route path="/Search" element={<Search />} />  
+          <Route path="/Explore" element={<Explore />} />   
+
+          <Route path="/Home" element={<LandingPage />} />  
+          <Route path="/Profile" element={<Profile />} />                         
+
          
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />

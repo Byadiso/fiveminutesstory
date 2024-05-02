@@ -12,7 +12,7 @@ import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SearchIcon from "@mui/icons-material/Search";
 
-function Dashboard() {
+function Profile() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -123,4 +123,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Profile;
