@@ -12,6 +12,7 @@ import Search from "./components/Search.jsx";
 import Profile from "./components/Profile.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Explore from "./components/Explore.jsx";
+import Library from "./components/Library.jsx";
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Playing" element={<NowPlaying />} />  
           <Route path="/Search" element={<Search />} />  
           <Route path="/Explore" element={<Explore />} />   
+          <Route path="/Library" element={<Library />} />  
 
           <Route path="/Home" element={<LandingPage />} />  
           <Route path="/Profile" element={<Profile />} />                         

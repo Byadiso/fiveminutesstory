@@ -6,14 +6,13 @@ import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
-import PersonAdd from "@mui/icons-material/PersonAdd";
-import Settings from "@mui/icons-material/Settings";
-import Logout from "@mui/icons-material/Logout";
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import MicNoneIcon from "@mui/icons-material/MicNone";
 import SearchInput from "./InputComonents/SearchInput";
+import LogoutIcon from '@mui/icons-material/Logout';
 import Colors from "../Style/Colors.js";
 import { Link } from "react-router-dom";
 
@@ -117,14 +116,20 @@ export default function NavBar() {
           
           <MenuItem onClick={handleClose}>
             <Link to="/Profile" style={{textDecoration:"none", color:"Black", display:"flex", flexDirection:"row", alignItems:"center"}}>
-            <Avatar /> My account
+            <AccountBoxIcon /> My account
+            </Link>            
+          </MenuItem>
+          <Divider />  
+          <MenuItem onClick={handleClose}>
+            <Link to="/Library" style={{textDecoration:"none", color:"Black", display:"flex", flexDirection:"row", alignItems:"center"}}>
+            <LibraryBooksIcon /> My Library
             </Link>            
           </MenuItem>
           <Divider />         
           
           <MenuItem onClick={handleClose}>
             <ListItemIcon>
-              <Logout fontSize="small" />
+              <LogoutIcon fontSize="small" />
             </ListItemIcon>
             Logout
           </MenuItem>
