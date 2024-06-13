@@ -25,14 +25,7 @@ function LandingPage() {
         <div className="Hero_section">
           <ImageCard />
         </div>
-        <div
-          className="Category_list"
-          style={{
-            // display: "flex",
-            // flexDirection: "row",
-            // justifyContent: "center",
-            // alignItems: "start",           
-          }}
+        <div className="Category_list"          
         >
           <h4>Featured</h4>
           <h4>New & Notable</h4>

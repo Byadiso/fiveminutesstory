@@ -41,12 +41,10 @@ body {
 }
 
 .Category_list {
-    
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: start;
-
 }
 
 .Category_list h4 {
@@ -59,6 +57,7 @@ body {
 }
 
 .Story_genres p {
+    display: flex;
     background-color: var(--WeakBackgroundColor);
     padding: 7px;
     margin: 5px;
@@ -69,7 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;    
+    justify-content: center;
 }
 
 

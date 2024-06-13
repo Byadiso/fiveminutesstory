@@ -24,7 +24,7 @@ function NowPlaying() {
       <div className="main_Landing">
         <div className="play_container">
           <div>
-            <img src="http://placehold.it"></img>
+          <ImageCard />
           </div>
           <div>
             <h2>The last of us : A Journey into the Post Apocalyptic west</h2>
