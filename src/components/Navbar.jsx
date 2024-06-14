@@ -39,8 +39,7 @@ export default function NavBar() {
       <h4 style={{ minWidth: 100, marginRight: "600px" }}>
         Five Minutes Story
       </h4>
-      </Link>
-      
+      </Link>      
 
       <div>
         <Box

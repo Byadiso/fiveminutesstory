@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: var(--BackgroundColor);
+    border-top: 1px solid var(--TextColor);
 }
 
 .Category_list {

@@ -20,7 +20,8 @@ function LandingPage() {
   }, []);
   return (
     <div>
-      <NavBar />
+      <NavBar/>
+      
       <div className="main_Landing">
         <div className="Hero_section">
           <ImageCard />

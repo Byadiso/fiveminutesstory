@@ -116,6 +116,12 @@ body {
 }
 
 
+.placeholder_input::placeholder {
+    color: red;
+    opacity: 1; 
+    background-color: red;
+}
+
 
 
 
