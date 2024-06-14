@@ -38,12 +38,31 @@ function LandingPage() {
           <div
             className="Stories_container"
             style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignContent: "center",
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gridTemplateRows: 'repeat(2, auto)',
+              gap: '10px',
+              justifyItems: 'center',
+              alignItems: 'center',       
+              padding: '10px', 
             }}
           >
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
+            <div className="Story-Item">
+              <img src={storyImage1} alt="" width={200} />
+              <p>The way I heard it</p>
+            </div>
             <div className="Story-Item">
               <img src={storyImage1} alt="" width={200} />
               <p>The way I heard it</p>
@@ -109,6 +128,7 @@ function LandingPage() {
               <img src={storyImage1} alt="" width={200} />
               <p>The way I heard it</p>
             </div>
+            
           </div>
         </div>
       </div>

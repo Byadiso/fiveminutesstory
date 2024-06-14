@@ -44,12 +44,14 @@ body {
 .Category_list {
     display: flex;
     flex-direction: row;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .Category_list h4 {
+    align-self: flex-start;
     margin-left: 120px;
+     
 
 }
 
