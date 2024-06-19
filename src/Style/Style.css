@@ -1,0 +1,46 @@
+:root {
+    --ButtongColor: #2816E3;
+    --WeakBackgroundColor: #242445;    
+    --BackgroundColor: #111120;
+    --TextColor: #8A87B1;
+}
+
+.not_found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+
+}
+
+.not_found p {
+    color: var(--whiteColor);
+    font-size: large;
+    font-weight: 800;
+}
+
+.NoAccessContainer {
+    display: "flex";
+    flex-direction: "column";
+    align-items: "start";
+    margin-top: 110px;
+    margin-left: 430px;
+    justify-content: "start";
+}
+
+
+
+/* For responsiveness  */
+@media only screen and (max-width: 720px) {
+    .NoAccessContainer {
+        margin: 200px;
+        padding: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 920px) {
+    .NoAccessContainer {
+        margin: 0px;
+    }
+}

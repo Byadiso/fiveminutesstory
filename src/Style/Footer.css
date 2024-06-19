@@ -1,0 +1,51 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --ButtongColor: #2816E3;
+    --WeakBackgroundColor: #242445;    
+    --BackgroundColor: #111120;
+    --TextColor: #8A87B1;
+}
+
+/* all styles  ---------------------------*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+footer {   
+   
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--blackColor);
+    color: var(--whiteColor);  
+}
+
+.quick_menu p{
+    margin-left: 60px;
+    padding: 20px;
+    color: var(--TextColor);
+}
+
+._menu p:hover{
+    cursor:pointer
+}
+
+footer div {
+    margin-right: 0px;
+}
