@@ -7,7 +7,6 @@
     --WeakBackgroundColor: #242445;
     --BackgroundColor: #111120;
     --TextColor: #8A87B1;
-
 }
 
 /* all styles  ---------------------------*/
@@ -44,14 +43,15 @@ body {
 .Category_list {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: start;
     justify-content: flex-start;
+
+ 
 }
 
-.Category_list h4 {
-    align-self: flex-start;
-    margin-left: 120px;
-     
+.Category_list h4 {   
+    margin-left: 150px;
+    color: var(--TextColor);
 
 }
 
@@ -65,6 +65,7 @@ body {
     padding: 7px;
     margin: 5px;
     border-radius: 5px;
+    color: var(--TextColor);
 }
 
 .Main_stories {
@@ -74,6 +75,13 @@ body {
     justify-content: center;
 }
 
+.Main_stories h3 {
+    color: var(--TextColor);
+}
+
+.Story-Item p {
+    color: white;
+}
 
 
 /* for responsiveness  mobile*/
