@@ -22,9 +22,12 @@ export default function SearchInput() {
         placeholder="Search"
         sx={{
           '& .MuiInputBase-input::placeholder': {
-              color: '#8A87B1',
+              color: Colors.TextColor,
               opacity: 1,
-          }
+          },
+          '& .MuiInputBase-input': {
+            color: Colors.TextColor, // Set the input text color to white
+          },
       }}
         InputProps={{
           startAdornment: (

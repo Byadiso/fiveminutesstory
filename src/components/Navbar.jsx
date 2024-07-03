@@ -53,12 +53,14 @@ export default function NavBar() {
           <SearchInput />
           <MicNoneIcon sx={{            
             backgroundColor: Colors.WeakBackgroundColor,
+            color: Colors.TextColor,
             margin:"7px",
             padding:"2px",
             borderRadius:"5px", 
           }}/>
           <NotificationsNoneIcon sx={{            
             backgroundColor: Colors.WeakBackgroundColor,
+            color: Colors.TextColor,
             margin:"7px",
             padding:"2px",
             borderRadius:"5px",    
