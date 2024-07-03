@@ -12,12 +12,17 @@ import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SearchIcon from "@mui/icons-material/Search";
 
+import Colors from "../Style/Colors"
+
+
+
 function LandingPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     isAuthenticated(setIsLoggedIn);
   }, []);
+
   return (
     <div>
       <NavBar/>
@@ -48,55 +53,60 @@ function LandingPage() {
             }}
           >
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
           </div>
         </div>
-        <h3>Story telling Genre</h3>
 
-        <div className="Story_genres" style={{
+      
+
+        <div className="Story_genres" >
+              <h3 >Story telling Genre</h3>
+          <div style={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
           }}>
-          <p><BookIcon/>Fiction</p>
-          <p><MicNoneIcon/> Non-fiction</p>
-          <p><SentimentSatisfiedAltIcon/> Comedy</p>
-          <p><FavoriteBorderIcon/> Drama</p>
-          <p><MicNoneIcon/> True Crime</p>
-          <p><SearchIcon/> Mystery</p>
-          <p><MicNoneIcon/> Biography</p>
-          <p><MicNoneIcon/> Sci-Fi</p>
+              <p><BookIcon sx={{ color: Colors.WhiteColor, marginRight: '5px' }}/>Fiction</p>
+          <p><MicNoneIcon sx={{ color: Colors.WhiteColor , marginRight: '5px' }}/> Non-fiction</p> 
+          <p><SentimentSatisfiedAltIcon sx={{ color: Colors.WhiteColor , marginRight: '5px'}}/> Comedy</p>
+          <p><FavoriteBorderIcon sx={{ color: Colors.WhiteColor , marginRight: '5px'}}/> Drama</p>
+          <p><MicNoneIcon sx={{ color: Colors.WhiteColor , marginRight: '5px'}}/> True Crime</p>
+          <p><SearchIcon sx={{ color: Colors.WhiteColor , marginRight: '5px'}}/> Mystery</p>
+          <p><MicNoneIcon sx={{ color: Colors.WhiteColor , marginRight: '5px'}}/> Biography</p>
+          <p><MicNoneIcon sx={{ color: Colors.WhiteColor , marginRight: '5px'}}/> Sci-Fi</p>
+              </div>
+          
 
         </div>
 
@@ -113,19 +123,19 @@ function LandingPage() {
             }}
           >
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
+              <img src={storyImage1} alt="" width={200} style={{ borderRadius: '20px' }} />
               <p>The way I heard it</p>
             </div>
             

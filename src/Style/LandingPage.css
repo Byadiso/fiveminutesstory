@@ -7,6 +7,7 @@
     --WeakBackgroundColor: #242445;
     --BackgroundColor: #111120;
     --TextColor: #8A87B1;
+    --whiteColor : #ffffff;
 }
 
 /* all styles  ---------------------------*/
@@ -42,9 +43,10 @@ body {
 
 .Category_list {
     display: flex;
+    justify-content: start;
     flex-direction: row;
-    align-items: start;
-    justify-content: flex-start;
+    align-items: start;    
+    align-content: start;
 
  
 }
@@ -59,8 +61,24 @@ body {
     margin: 10px;
 }
 
-.Story_genres p {
+h3{
+     color: var(--whiteColor);
+}
+
+.Story_genres {
     display: flex;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    flex-direction: column;
+}
+
+.Story_genres p {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     background-color: var(--WeakBackgroundColor);
     padding: 7px;
     margin: 5px;
@@ -73,10 +91,6 @@ body {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-}
-
-.Main_stories h3 {
-    color: var(--TextColor);
 }
 
 .Story-Item p {
