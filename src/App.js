@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import LandingPage from "./components/LandingPage.jsx";
+import LandingPage from "./components/pages/LandingPage.jsx";
 
-import Login from "./components/Login.jsx";
-import NoMatch from "./components/NoMatch.jsx";
-import Logout from "./components/Logout.jsx";
-import Register from "./components/RegisterComponent.jsx";
+import Login from "./components/pages/Login.jsx";
+import NoMatch from "./components/pages/NoMatch.jsx";
+import Logout from "./components/pages/Logout.jsx";
+import Register from "./components/pages/RegisterComponent.jsx";
 
-import NowPlaying from "./components/NowPlaying.jsx";
-import Search from "./components/Search.jsx";
-import Profile from "./components/Profile.jsx";
-import Dashboard from "./components/Dashboard.jsx";
-import Explore from "./components/Explore.jsx";
-import Library from "./components/Library.jsx";
+import NowPlaying from "./components/pages/NowPlaying.jsx";
+import Search from "./components/pages/Search.jsx";
+import Profile from "./components/pages/Profile.jsx";
+import Dashboard from "./components/pages/Dashboard.jsx";
+import Explore from "./components/pages/Explore.jsx";
+import Library from "./components/pages/Library.jsx";
 
 
 

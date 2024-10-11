@@ -1,5 +1,5 @@
 import React from "react";
-import "../Style/Style.css";
+import "../../Style/Style.css";
 import SignalWifiBadIcon from "@mui/icons-material/SignalWifiBad";
 
 function NoConnection(props) {

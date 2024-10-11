@@ -1,10 +1,10 @@
-import "../Style/LandingPage.css";
+import "../../Style/LandingPage.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { isAuthenticated } from "../firebase/Authentication";
+import { isAuthenticated } from "../../firebase/Authentication";
 import NavBar from "./Navbar";
-import ImageCard from "./Modals/ImageCard";
-import storyImage1 from "../images/Fiveminutes_hero.jpg";
+import ImageCard from "../Modals/ImageCard";
+import storyImage1 from "../../images/Fiveminutes_hero.jpg";
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import Footer from "./Footer";
 import BookIcon from '@mui/icons-material/Book';
@@ -12,7 +12,7 @@ import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SearchIcon from "@mui/icons-material/Search";
 
-function LandingPage() {
+function Dashboard() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -20,13 +20,13 @@ function LandingPage() {
   }, []);
   return (
     <div>
-      <NavBar/>
-      
+      <NavBar />
       <div className="main_Landing">
         <div className="Hero_section">
           <ImageCard />
         </div>
-        <div className="Category_list"          
+        <div
+          className="Category_list"          
         >
           <h4>Featured</h4>
           <h4>New & Notable</h4>
@@ -38,31 +38,12 @@ function LandingPage() {
           <div
             className="Stories_container"
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gridTemplateRows: 'repeat(2, auto)',
-              gap: '10px',
-              justifyItems: 'center',
-              alignItems: 'center',       
-              padding: '10px', 
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignContent: "center",
             }}
           >
-            <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
-              <p>The way I heard it</p>
-            </div>
-            <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
-              <p>The way I heard it</p>
-            </div>
-            <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
-              <p>The way I heard it</p>
-            </div>
-            <div className="Story-Item">
-              <img src={storyImage1} alt="" width={200} />
-              <p>The way I heard it</p>
-            </div>
             <div className="Story-Item">
               <img src={storyImage1} alt="" width={200} />
               <p>The way I heard it</p>
@@ -128,7 +109,6 @@ function LandingPage() {
               <img src={storyImage1} alt="" width={200} />
               <p>The way I heard it</p>
             </div>
-            
           </div>
         </div>
       </div>
@@ -137,4 +117,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default Dashboard;

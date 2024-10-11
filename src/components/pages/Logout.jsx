@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "../Style/user.css";
+import "../../Style/user.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link, useNavigate } from "react-router-dom";
-import { LogoutUser, isAuthenticated } from "../firebase/Authentication";
+import { LogoutUser, isAuthenticated } from "../../firebase/Authentication";
 
 function Logout() {
   const navigate = useNavigate();

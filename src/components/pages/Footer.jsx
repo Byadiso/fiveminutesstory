@@ -1,11 +1,11 @@
 import React from "react";
-import "../Style/Footer.css";
+import "../../Style/Footer.css";
 import { FaCopyright } from "react-icons/fa";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import Colors from "../Style/Colors.js";
+import Colors from "../../Style/Colors.js";
 
 function Footer() {
   const currentdate = new Date();

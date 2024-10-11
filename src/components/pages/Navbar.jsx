@@ -11,9 +11,9 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import MicNoneIcon from "@mui/icons-material/MicNone";
-import SearchInput from "./InputComonents/SearchInput";
+import SearchInput from "../InputComonents/SearchInput.jsx";
 import LogoutIcon from '@mui/icons-material/Logout';
-import Colors from "../Style/Colors.js";
+import Colors from "../../Style/Colors.js";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
