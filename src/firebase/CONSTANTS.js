@@ -1,1 +1,0 @@
-export const KEYWORDS = ["bet", "super", "superbetting"];
