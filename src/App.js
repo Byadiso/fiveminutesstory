@@ -40,7 +40,7 @@ function App() {
           <Route path="/Register" element={<Register />} />
 
           <Route path="/Logout" element={<Logout />} />
-          {/* routes when no match */}
+         
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </Router>

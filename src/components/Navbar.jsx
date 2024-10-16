@@ -37,7 +37,7 @@ export default function NavBar() {
     >
       <Link to="/" style={{ textDecoration:"none", color:Colors.WhiteColor}}>
       <h4 style={{ minWidth: 100, marginRight: "700px" }}>
-        5Minutes Story
+        Five Minutes Story
       </h4>
       </Link>      
 

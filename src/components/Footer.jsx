@@ -7,7 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Colors from "../Style/Colors.js";
 import { Typography } from '@mui/material';
-import { Link } from 'react-router-dom'; // Make sure you have react-router-dom installed
+import { Link } from 'react-router-dom'; 
 
 function Footer() {
   const currentdate = new Date();
@@ -44,7 +44,7 @@ function Footer() {
             <Typography variant="body1">API</Typography>
           </Link>
           <Link to="/privacy" style={{ color: Colors.TextColor, textDecoration: 'none', margin: '0 10px' }}>
-            <Typography variant="body1">Privacy</Typography>
+            <Typography variant="body1">Privacy Updated</Typography>
           </Link>
           <Link to="/terms" style={{ color: Colors.TextColor, textDecoration: 'none', margin: '0 10px' }}>
             <Typography variant="body1">Terms Updated</Typography>
