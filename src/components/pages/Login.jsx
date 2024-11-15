@@ -65,7 +65,7 @@ function Login() {
           <div>
             <div className="login_form">
               <div>
-                <p style={{color:"black"}}>Login to LearnByWriting.com</p>
+                <p style={{color:"black"}}>Login to Five minutes Story</p>
                 <p className="error">{error === null ? successMessage : error}</p>
                 <input
                   type="text"

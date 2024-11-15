@@ -6,7 +6,7 @@ import { isAuthenticated } from "../../firebase/Authentication";
 
 import { ValidateTransaction, waitToLoad } from "../../firebase/Helpers";
 import NoAccess from "./NoAccess";
-import RadioComponent from "../../InputComonents/RadioComponent";
+import RadioComponent from "../InputComonents/RadioComponent";
 import { Link } from "react-router-dom";
 
 function AddRecord() {  

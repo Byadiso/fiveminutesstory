@@ -36,7 +36,7 @@ export default function NavBar() {
       }}
     >
       <Link to="/" style={{ textDecoration:"none", color:Colors.WhiteColor}}>
-      <h4 style={{ minWidth: 100, marginRight: "600px" }}>
+      <h4 style={{ minWidth: 100, marginRight: "700px" }}>
         Five Minutes Story
       </h4>
       </Link>      
@@ -53,12 +53,14 @@ export default function NavBar() {
           <SearchInput />
           <MicNoneIcon sx={{            
             backgroundColor: Colors.WeakBackgroundColor,
+            color: Colors.TextColor,
             margin:"7px",
             padding:"2px",
             borderRadius:"5px", 
           }}/>
           <NotificationsNoneIcon sx={{            
             backgroundColor: Colors.WeakBackgroundColor,
+            color: Colors.TextColor,
             margin:"7px",
             padding:"2px",
             borderRadius:"5px",    

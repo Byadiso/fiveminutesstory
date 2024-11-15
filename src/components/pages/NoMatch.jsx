@@ -13,10 +13,15 @@ function NoMatch() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          marginTop: "150px",
+          marginTop: "85px",
+          marginBottom: "80px",
         }}
       >
-        <p style={{ color: "black" }}> 404 No Match found!</p>
+        <div>
+        <h1 style={{ color: "black" }}>404</h1>
+        </div>
+        
+        <p style={{ color: "black" }}> That page doesn't exist or might have been removed!</p>
         <Link to="/">
           <p style={{ color: "black" }}>Return to Home Page</p>
         </Link>
