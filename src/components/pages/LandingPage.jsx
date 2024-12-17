@@ -23,6 +23,16 @@ function LandingPage() {
   const description =
     "Start your day with a smile. We've got some feel-good stories to help you wake up on the right side of the bed";
 
+    const styles= {
+      textDecoration: "none",
+      color: "white",
+      fontSize: "13px",
+      justifyContent: "start",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "left",
+    }
+
   useEffect(() => {
     isAuthenticated(setIsLoggedIn);
   }, []);
@@ -60,6 +70,10 @@ function LandingPage() {
             }}
           >
             <div className="Story-Item">
+            <Link
+                to="/Playing"
+                style={styles}
+              >
               <img
                 src={storyImage1}
                 alt=""
@@ -67,9 +81,13 @@ function LandingPage() {
                 style={{ borderRadius: "20px" }}
               />
               <p>The way I heard it</p>
+              </Link>
             </div>
             <div className="Story-Item">
-              <Link to="/Playing">
+              <Link
+                to="/Playing"
+                style={styles}
+              >
                 <img
                   src={storyImage1}
                   alt=""
@@ -80,6 +98,10 @@ function LandingPage() {
               </Link>
             </div>
             <div className="Story-Item">
+            <Link
+                to="/Playing"
+                style={styles}
+              >
               <img
                 src={storyImage1}
                 alt=""
@@ -87,8 +109,13 @@ function LandingPage() {
                 style={{ borderRadius: "20px" }}
               />
               <p>The way I heard it</p>
+              </Link>
             </div>
             <div className="Story-Item">
+            <Link
+                to="/Playing"
+                style={styles}
+              >
               <img
                 src={storyImage1}
                 alt=""
@@ -96,8 +123,13 @@ function LandingPage() {
                 style={{ borderRadius: "20px" }}
               />
               <p>The way I heard it</p>
+              </Link>
             </div>
             <div className="Story-Item">
+            <Link
+                to="/Playing"
+                style={styles}
+              >
               <img
                 src={storyImage1}
                 alt=""
@@ -105,8 +137,13 @@ function LandingPage() {
                 style={{ borderRadius: "20px" }}
               />
               <p>The way I heard it</p>
+              </Link>
             </div>
             <div className="Story-Item">
+            <Link
+                to="/Playing"
+                style={styles}
+              >
               <img
                 src={storyImage1}
                 alt=""
@@ -114,8 +151,13 @@ function LandingPage() {
                 style={{ borderRadius: "20px" }}
               />
               <p>The way I heard it</p>
+              </Link>
             </div>
             <div className="Story-Item">
+            <Link
+                to="/Playing"
+                style={styles}
+              >
               <img
                 src={storyImage1}
                 alt=""
@@ -123,8 +165,13 @@ function LandingPage() {
                 style={{ borderRadius: "20px" }}
               />
               <p>The way I heard it</p>
+              </Link>
             </div>
             <div className="Story-Item">
+            <Link
+                to="/Playing"
+                style={styles}
+              >
               <img
                 src={storyImage1}
                 alt=""
@@ -132,6 +179,7 @@ function LandingPage() {
                 style={{ borderRadius: "20px" }}
               />
               <p>The way I heard it</p>
+              </Link>
             </div>
           </div>
         </div>

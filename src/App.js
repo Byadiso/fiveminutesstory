@@ -13,6 +13,8 @@ import Profile from "./components/pages/Profile.jsx";
 import Dashboard from "./components/pages/Dashboard.jsx";
 import Explore from "./components/pages/Explore.jsx";
 import Library from "./components/pages/Library.jsx";
+import About from "./components/pages/About.jsx";
+import Blog from "./components/pages/Blog.jsx";
 
 
 
@@ -38,6 +40,11 @@ function App() {
          
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
+
+          <Route path="/About" element={<About />} />
+          <Route path="/Blog" element={<Blog />} />
+
+
 
           <Route path="/Logout" element={<Logout />} />
          
