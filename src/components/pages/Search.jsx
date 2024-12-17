@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../../firebase/Authentication";
 import NavBar from "./Navbar";
-import ImageCard from "../Modals/ImageCard";
+import ImageCard from "../Modals/AudioCard";
 
 import MicNoneIcon from "@mui/icons-material/MicNone";
 import Footer from "./Footer";

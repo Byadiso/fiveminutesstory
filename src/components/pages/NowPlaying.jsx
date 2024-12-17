@@ -3,16 +3,22 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../../firebase/Authentication";
 import NavBar from "./Navbar";
-import ImageCard from "../Modals/ImageCard";
+import ImageCard from "../Modals/AudioCard";
 import MicNoneIcon from "@mui/icons-material/MicNone";
 import Footer from "./Footer";
 import BookIcon from "@mui/icons-material/Book";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import SearchIcon from "@mui/icons-material/Search";
+import AudioCard from "../Modals/AudioCard.jsx";
+import Audio1 from "../../Audio/Audio2.mp3";
+import AudioPlayer from "./AudioPlayer.jsx";
 
 function NowPlaying() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const title = "Playing from recently played";
+  const description = "Yes, this is the story behing everyda day";
+
 
   useEffect(() => {
     isAuthenticated(setIsLoggedIn);
@@ -23,7 +29,8 @@ function NowPlaying() {
       <div className="main_Landing">
         <div className="play_container">
           <div>
-          <ImageCard />
+          <AudioPlayer audioSrc={Audio1}
+            />
           </div>
           <div>
             <h2>The last of us : A Journey into the Post Apocalyptic west</h2>
