@@ -3,24 +3,17 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../../firebase/Authentication";
 import NavBar from "./Navbar";
-import ImageCard from "../Modals/ImageCard.jsx";
-import MicNoneIcon from "@mui/icons-material/MicNone";
 import Footer from "./Footer";
-import BookIcon from "@mui/icons-material/Book";
-import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import SearchIcon from "@mui/icons-material/Search";
-import AudioCard from "../Modals/ImageCard.jsx";
+import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
+
 
 import AudioPlayer from "./AudioPlayerSingle.jsx";
-import AudioPlayerSingle from "./AudioPlayer.jsx";
 import Audio1 from "../../Audio/Audio1.mp3";
-import imageRelated from "../../images/Fiveminutes_hero.jpg"
+import imageRelated from "../../images/Fiveminutes_hero.jpg";
 
 function NowPlaying() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const title = "Playing from recently played";
-  const description = "Yes, this is the story behing everyda day";
+
 
   useEffect(() => {
     isAuthenticated(setIsLoggedIn);
@@ -73,7 +66,7 @@ function NowPlaying() {
                   justifyContent: "start",
                   flexDirection: "column",
                   alignContent: "start",
-                  width: "100%",                 
+                  width: "100%",
                 }}
               >
                 <div>
@@ -82,26 +75,32 @@ function NowPlaying() {
                 <div className="related_item">
                   <img src={imageRelated} alt="relatedImage"></img>
                   <div>
-                    <p>The last of us : A Journey into the Post Apocalyptic west</p>
+                    <p>
+                      The last of us : A Journey into the Post Apocalyptic west
+                    </p>
                     <p className="timer">1 hour , 27 minutes</p>
                   </div>
-                 
+                  <div><PlayArrowOutlinedIcon /></div>
                 </div>
                 <div className="related_item">
                   <img src={imageRelated} alt="relatedImage"></img>
                   <div>
-                    <p>The last of us : A Journey into the Post Apocalyptic west</p>
+                    <p>
+                      The last of us : A Journey into the Post Apocalyptic west
+                    </p>
                     <p className="timer">1 hour , 27 minutes</p>
                   </div>
-                 
+                  <div><PlayArrowOutlinedIcon /></div>
                 </div>
                 <div className="related_item">
                   <img src={imageRelated} alt="relatedImage"></img>
                   <div>
-                    <p>The last of us : A Journey into the Post Apocalyptic west</p>
+                    <p>
+                      The last of us : A Journey into the Post Apocalyptic west
+                    </p>
                     <p className="timer">1 hour , 27 minutes</p>
                   </div>
-                 
+                  <div><PlayArrowOutlinedIcon /></div>
                 </div>
               </div>
             </div>
