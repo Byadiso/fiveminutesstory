@@ -45,7 +45,8 @@
     display: flex;
     align-items: center;
     width: 100%;
-    gap: 10px;
+    padding: 15px;
+    gap: 5px;
   }
   
   #volume-slider {
@@ -74,5 +75,9 @@
   
   #volume-slider:active::-webkit-slider-thumb {
     background: #242445;
+  }
+  .progress-bar {
+    color: #434383;
+    background-color: #434383;
   }
   

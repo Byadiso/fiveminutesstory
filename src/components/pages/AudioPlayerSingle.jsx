@@ -1,5 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../../Style/AudioPlayer.css";// For styling
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import PauseCircleIcon from '@mui/icons-material/PauseCircle';
+import FastForwardIcon from '@mui/icons-material/FastForward';
+import FastRewindIcon from '@mui/icons-material/FastRewind';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 
 const AudioPlayersingle = ({ audioSrc }) => {
   const audioRef = useRef(null);
@@ -64,15 +69,15 @@ const AudioPlayersingle = ({ audioSrc }) => {
       </div>
 
       <div className="controls">
-        <button onClick={handleBackward} className="control-btn">⏪</button>
+        <button onClick={handleBackward} className="control-btn"><FastRewindIcon /></button>
         <button onClick={togglePlayPause} className="control-btn">
-          {isPlaying ? "⏸" : "▶️"}
+          {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
         </button>
-        <button onClick={handleForward} className="control-btn">⏩</button>
+        <button onClick={handleForward} className="control-btn"><FastForwardIcon/></button>
       </div>
 
       <div className="volume-control">
-        <label htmlFor="volume-slider">Volume:</label>
+        <label htmlFor="volume-slider"><VolumeUpIcon /> </label>
         <input
           id="volume-slider"
           type="range"

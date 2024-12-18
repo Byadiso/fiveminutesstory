@@ -1,5 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../../Style/AudioPlayer.css"; // For styling
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import PauseCircleIcon from '@mui/icons-material/PauseCircle';
+import FastForwardIcon from '@mui/icons-material/FastForward';
+import FastRewindIcon from '@mui/icons-material/FastRewind';
+import SkipNextIcon from '@mui/icons-material/SkipNext';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 
 const AudioPlayer = ({ audioFiles }) => {
   const audioRef = useRef(null);
@@ -17,7 +24,9 @@ const AudioPlayer = ({ audioFiles }) => {
 
     return () => {
       audio.removeEventListener("timeupdate", updateTime);
-      audio.removeEventListener("loadedmetadata", () => setDuration(audio.duration));
+      audio.removeEventListener("loadedmetadata", () =>
+        setDuration(audio.duration)
+      );
     };
   }, []);
 
@@ -60,10 +69,8 @@ const AudioPlayer = ({ audioFiles }) => {
   const nextAudioHandler = () => {
     if (currentTrackIndex < audioFiles.length - 1) {
       setCurrentTrackIndex(currentTrackIndex + 1);
-      
     } else {
       setCurrentTrackIndex(0); // Loop back to the first track
-      
     }
   };
 
@@ -81,21 +88,30 @@ const AudioPlayer = ({ audioFiles }) => {
 
       <div className="audio-info">
         <div className="audio-time">
-          <span>{formatTime(currentTime)}</span> / <span>{formatTime(duration)}</span>
+          <p><i>"This is the best song ..." </i></p>
         </div>
       </div>
 
       <div className="controls">
-        <button onClick={previousAudioHandler} className="control-btn">⏮️</button>
-        <button onClick={handleBackward} className="control-btn">⏪</button>
-        <button onClick={togglePlayPause} className="control-btn">
-          {isPlaying ? "⏸" : "▶️"}
+        <button onClick={previousAudioHandler} className="control-btn">
+          <SkipPreviousIcon/>
         </button>
-        <button onClick={handleForward} className="control-btn">⏩</button>
-        <button onClick={nextAudioHandler} className="control-btn">⏭️</button>
+        <button onClick={handleBackward} className="control-btn">
+          <FastRewindIcon/>
+        </button>
+        <button onClick={togglePlayPause} className="control-btn">
+          {isPlaying ? <PauseCircleIcon/> : <PlayCircleIcon/>}
+        </button>
+        <button onClick={handleForward} className="control-btn">
+          <FastForwardIcon/>
+        </button>
+        <button onClick={nextAudioHandler} className="control-btn">
+          <SkipNextIcon/>
+        </button>
       </div>
 
       <div className="progress-bar-container">
+      <span>{formatTime(currentTime)}</span> {" "}
         <input
           type="range"
           min="0"
@@ -105,6 +121,7 @@ const AudioPlayer = ({ audioFiles }) => {
           onChange={handleProgressBarChange}
           className="progress-bar"
         />
+        <span>{formatTime(duration)}</span>
       </div>
     </div>
   );

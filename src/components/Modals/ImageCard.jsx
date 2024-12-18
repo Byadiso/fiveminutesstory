@@ -24,7 +24,7 @@ function ImageCard({ title, description }) {
     justifyContent: "center",
     color: "white",
     textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
-    padding: "70px",
+    padding: "130px",
     marginTop: "20px",
     borderRadius: "10px",
   };
@@ -38,7 +38,7 @@ function ImageCard({ title, description }) {
   return (
     <div className="Hero_section" style={heroStyle}>
       <h1>{title} </h1>
-      <p>{description}</p>
+      <p><i>{description}</i></p>
       <AudioPlayerSingle audioFiles={audioFiles} />
    
     </div>
