@@ -116,14 +116,6 @@ body {
 }
 
 
-.placeholder_input::placeholder {
-    color: red;
-    opacity: 1; 
-    background-color: red;
-}
-
-
-
 
 /* for responsiveness  mobile*/
 @media only screen and (max-width: 720px) {

@@ -2,12 +2,14 @@ import React from "react";
 import HeroImage from "../../images/Fiveminutes_hero.jpg";
 import Box from "@mui/material/Box";
 import Fab from "@mui/material/Fab";
-import Colors from "../../Style/Colors";
+
 import { Link } from "react-router-dom";
-import AudioPlayer from "../pages/AudioPlayerSingle";
+
 import Audio1 from "../../Audio/Audio1.mp3";
 import Audio2 from "../../Audio/Audio2.mp3";
 import Audio3 from "../../Audio/Audio3.mp3";
+import Audio4 from "../../Audio/grateful.mp3";
+import Audio5 from "../../Audio/wepray.mp3";
 
 import AudioPlayerSingle from "../pages/AudioPlayer";
 // import AudioBackgroundImage from "../../images/Fiveminutes_hero.jpg"
@@ -30,9 +32,11 @@ function ImageCard({ title, description }) {
   };
 
   const audioFiles = [
-    Audio1,
-    Audio2,
-    Audio3,
+    // Audio1,
+    // Audio2,
+    // Audio3,
+    Audio4,
+    Audio5,
   ];
 
   return (

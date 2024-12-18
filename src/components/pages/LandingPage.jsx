@@ -3,14 +3,7 @@ import React, { useEffect, useState } from "react";
 import { isAuthenticated } from "../../firebase/Authentication";
 import NavBar from "./Navbar";
 import ImageCard from "../Modals/ImageCard";
-// import storyImage1 from "../../images/Fiveminutes_hero.jpg";
-// import MicNoneIcon from "@mui/icons-material/MicNone";
 import Footer from "./Footer";
-// import BookIcon from "@mui/icons-material/Book";
-// import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
-// import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-// import SearchIcon from "@mui/icons-material/Search";
-
 import CategoryContainer from "./CategoryContainer";
 import StoryGenre from "./StoryGenre";
 import RecentlyPlayed from "./RecentlyPlayed";

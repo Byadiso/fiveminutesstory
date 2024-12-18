@@ -79,8 +79,7 @@ export function formatTime(timestamp) {
     day: 'numeric', // numeric, 2-digit
     hour: '2-digit', // numeric, 2-digit
     minute: '2-digit', // numeric, 2-digit
-    second: '2-digit', // numeric, 2-digit
-    // timeZoneName: 'short' // short, long
+    second: '2-digit', // numeric, 2-digit  
   });
 }
 

@@ -1,8 +1,6 @@
-import {
-  // createUserWithEmailAndPassword,
+import {  
   getAuth,
-  onAuthStateChanged,
-  // signInWithEmailAndPassword,
+  onAuthStateChanged,  
   signOut,
 } from "firebase/auth";
 
@@ -31,40 +29,7 @@ export const getLoggedUser = (setIsloggedState) => {
   });
 }
 
-// export const login = (email, password) => {
-//   signInWithEmailAndPassword(Auth, email, password)
-   
-// };
 
-// export const register = (firstname, lastname, email, password) => {
-//   createUserWithEmailAndPassword(
-//     Auth,
-//     email,
-//     password,
-//     firstname,
-//     lastname
-//   ).then((userCredential) => {   
-//     const user = userCredential.user;
-//     const userData = {
-//       firstname: firstname,
-//       lastname: lastname,
-//       displayName: firstname,
-//       email: email,
-//     };
-//     app
-//       .firestore()
-//       .collection("users")
-//       .doc(user.uid)
-//       .set(userData)
-//       .then((user) => {       
-//         console.log("User data stored in Firestore.");
-//       })
-//       .catch((error) => {
-//         // Handle error
-//         console.error("Error storing user data in Firestore:", error);
-//       });
-//   });
-// };
 
 export const LogoutUser = () => {
   signOut(Auth)
