@@ -1,0 +1,54 @@
+:root {
+    --ButtongColor: #2816E3;
+    --WeakBackgroundColor: #242445;
+    --BackgroundColor: #111120;
+    --TextColor: #8A87B1;
+    --WhiteColor: #f9f9f9;
+}
+
+.recently-played {
+  padding: 20px; 
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.recently-played h4 {
+  text-align: start;
+  /* font-size: 12px; */
+  color: var(--WhiteColor);
+  margin-bottom: 20px;
+}
+
+.stories-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+.story-item-played {
+  text-align: center;  
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.story-item-played img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.story-item-played:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.story-item-played p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--TextColor);
+}

@@ -1,0 +1,51 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ButtongColor: #2816E3;
+    --WeakBackgroundColor: #242445;
+    --BackgroundColor: #111120;
+    --TextColor: #8A87B1;
+}
+
+/* all styles  ---------------------------*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* body syles  */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--blueColor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.play_related{
+    padding-bottom: 100px;
+}
+
+.related_item{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.related_item img{
+    width: 70px;
+    height: 75px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.related_item .timer{
+color: var(--TextColor);
+}

@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../../Style/AudioPlayer.css"; // For styling
+import "../../Style/AudioPlayer.css";// For styling
 
-const AudioPlayer = ({ audioFiles }) => {
+const AudioPlayersingle = ({ audioSrc }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(1.0);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -20,14 +20,6 @@ const AudioPlayer = ({ audioFiles }) => {
       audio.removeEventListener("loadedmetadata", () => setDuration(audio.duration));
     };
   }, []);
-
-  useEffect(() => {
-    // No autoplay here, just update the source when the track changes
-    if (audioRef.current) {
-      audioRef.current.src = audioFiles[currentTrackIndex];
-      setCurrentTime(0); // Reset time to 0 whenever a new track is loaded
-    }
-  }, [currentTrackIndex, audioFiles]);
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
@@ -52,62 +44,55 @@ const AudioPlayer = ({ audioFiles }) => {
     audioRef.current.currentTime -= 10; // Skip backward 10 seconds
   };
 
-  const handleProgressBarChange = (event) => {
-    const newTime = parseFloat(event.target.value);
-    audioRef.current.currentTime = newTime;
-  };
-
-  const nextAudioHandler = () => {
-    if (currentTrackIndex < audioFiles.length - 1) {
-      setCurrentTrackIndex(currentTrackIndex + 1);
-      
-    } else {
-      setCurrentTrackIndex(0); // Loop back to the first track
-      
-    }
-  };
-
-  const previousAudioHandler = () => {
-    if (currentTrackIndex > 0) {
-      setCurrentTrackIndex(currentTrackIndex - 1);
-    } else {
-      setCurrentTrackIndex(audioFiles.length - 1); // Loop to the last track
-    }
+  const handleVolumeChange = (event) => {
+    const newVolume = parseFloat(event.target.value);
+    setVolume(newVolume);
+    audioRef.current.volume = newVolume;
   };
 
   return (
-    <div className="audio-player">
-      <audio ref={audioRef} src={audioFiles[currentTrackIndex]} />
+    <div
+      className="audio-player"
+      style={{ backgroundSize: "cover", backgroundPosition: "center" }}
+    >
+      <audio ref={audioRef} src={audioSrc} />
 
-      <div className="audio-info">
+      <div className="audio-info">        
         <div className="audio-time">
           <span>{formatTime(currentTime)}</span> / <span>{formatTime(duration)}</span>
         </div>
       </div>
 
       <div className="controls">
-        <button onClick={previousAudioHandler} className="control-btn">⏮️</button>
         <button onClick={handleBackward} className="control-btn">⏪</button>
         <button onClick={togglePlayPause} className="control-btn">
           {isPlaying ? "⏸" : "▶️"}
         </button>
         <button onClick={handleForward} className="control-btn">⏩</button>
-        <button onClick={nextAudioHandler} className="control-btn">⏭️</button>
       </div>
 
-      <div className="progress-bar-container">
+      <div className="volume-control">
+        <label htmlFor="volume-slider">Volume:</label>
         <input
+          id="volume-slider"
           type="range"
           min="0"
-          max={duration}
-          value={currentTime}
-          step="0.1"
-          onChange={handleProgressBarChange}
-          className="progress-bar"
+          max="1"
+          step="0.01"
+          value={volume}
+          onChange={handleVolumeChange}
         />
       </div>
     </div>
   );
 };
 
-export default AudioPlayer;
+export default AudioPlayersingle;
+
+/* Example usage in a parent component:
+<AudioPlayer 
+  audioSrc="path/to/your/audio/file.mp3" 
+  title="Your Audio Title" 
+  backgroundImage="path/to/your/image.jpg" 
+/>
+*/
