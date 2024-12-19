@@ -1,83 +1,133 @@
 /* AudioPlayer.css */
 .audio-player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #f0f0f1c1, #191414a1);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
-    margin: 20px auto;
-    color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f0f1c1, #191414a1);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 35%; /* Adjust for smaller screens */
+  margin: 20px auto;
+  color: #fff;
+}
+
+.audio-info {
+  text-align: center;
+  font-size: 1rem; /* Adjust for readability on smaller screens */
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  width: 100%;
+  margin: 10px 0; /* Reduce spacing for smaller screens */
+  gap: 10px; /* Add spacing between buttons */
+}
+
+.control-btn {
+  background: #434383;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem; /* Adjust button size */
+  height: 45px; /* Adjust button height */
+  width: 45px; /* Adjust button width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.control-btn:hover {
+  background: #242445;
+  transform: scale(1.1);
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  gap: 5px; /* Add spacing between elements */
+}
+
+.progress-bar-container span {
+  font-size: 0.9rem; /* Adjust font size for smaller screens */
+}
+
+.progress-bar {
+  flex-grow: 1; /* Allow the progress bar to take available space */
+  appearance: none;
+  height: 5px;
+  background: #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #434383;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+  background: #242445;
+}
+
+@media (max-width: 768px) {
+  .audio-player {
+      padding: 15px; /* Reduce padding for smaller screens */
   }
-  
+
   .controls {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 20px 100px;
+      gap: 5px; /* Reduce gap between buttons */
   }
-  
+
   .control-btn {
-    /* background: #587efc; */
-    background: #434383;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.5rem;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s, background 0.3s;
+      font-size: 1rem; /* Further adjust button size */
+      height: 40px; /* Reduce button height */
+      width: 40px; /* Reduce button width */
   }
-  
-  .control-btn:hover {
-    background: #242445;
-    transform: scale(1.1);
+
+  .audio-info {
+      font-size: 0.9rem; /* Adjust text size */
   }
-  
-  .volume-control {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 15px;
-    gap: 5px;
+
+  .progress-bar-container span {
+      font-size: 0.8rem; /* Adjust text size for time */
   }
-  
-  #volume-slider {
-    flex-grow: 1;
-    appearance: none;
-    height: 5px;
-    background: #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: background 0.3s;
+}
+
+@media (max-width: 480px) {
+  .controls {
+      flex-direction: column; /* Stack controls vertically */
+      gap: 10px; /* Add spacing between stacked buttons */
   }
-  
-  #volume-slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background: #434383;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s;
+
+  .audio-player {
+      max-width: 100%; /* Allow full width on very small screens */
   }
-  
-  #volume-slider::-webkit-slider-thumb:hover {
-    background: #242445;
+
+  .progress-bar-container {
+      flex-direction: column; /* Stack progress bar and time vertically */
+      align-items: center;
   }
-  
-  #volume-slider:active::-webkit-slider-thumb {
-    background: #242445;
+
+  .progress-bar-container span {
+      margin-bottom: 5px; /* Add spacing between time and progress bar */
   }
+
   .progress-bar {
-    color: #434383;
-    background-color: #434383;
+      width: 90%; /* Reduce width of progress bar */
   }
-  
+}

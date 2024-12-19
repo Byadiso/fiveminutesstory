@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { isAuthenticated } from "../../firebase/Authentication";
 import NavBar from "./Navbar";
 import ImageCard from "../Modals/ImageCard";
-import storyImage1 from "../../images/Fiveminutes_hero.jpg";
+// import storyImage1 from "../../images/Fiveminutes_hero.jpg";
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import Footer from "./Footer";
 import BookIcon from '@mui/icons-material/Book';
@@ -15,6 +15,8 @@ import SearchIcon from "@mui/icons-material/Search";
 function Profile() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const  storyImage1 ="/images/Fiveminutes_hero.jpg"
+
   useEffect(() => {
     isAuthenticated(setIsLoggedIn);
   }, []);
@@ -22,17 +24,10 @@ function Profile() {
     <div>
       <NavBar />
       <div className="main_Landing">
-        <div className="Hero_section">
-          <ImageCard />
-        </div>
+        
         <div
           className="Category_list"
-          style={{
-            // display: "flex",
-            // flexDirection: "row",
-            // justifyContent: "center",
-            // alignItems: "start",           
-          }}
+          
         >
           <h4>Featured</h4>
           <h4>New & Notable</h4>

@@ -1,54 +1,97 @@
 :root {
-    --ButtongColor: #2816E3;
-    --WeakBackgroundColor: #242445;
-    --BackgroundColor: #111120;
-    --TextColor: #8A87B1;
-    --WhiteColor: #f9f9f9;
+  --ButtonColor: #2816E3;
+  --WeakBackgroundColor: #242445;
+  --BackgroundColor: #111120;
+  --TextColor: #8A87B1;
+  --WhiteColor: #f9f9f9;
 }
 
 .recently-played {
-  padding: 20px; 
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 1200px;
+padding: 20px;
+border-radius: 10px;
+margin: 20px auto;
+max-width: 1200px;
 }
 
 .recently-played h4 {
-  text-align: start;
-  /* font-size: 12px; */
-  color: var(--WhiteColor);
-  margin-bottom: 20px;
+text-align: start;
+color: var(--WhiteColor);
+margin-bottom: 20px;
+font-size: 1.2rem; /* Adjusted font size for better readability */
 }
 
 .stories-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  justify-items: center;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 10px;
+justify-items: center;
 }
 
+/* Story Item Style */
 .story-item-played {
-  text-align: center;  
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+text-align: center;
+border-radius: 10px;
+padding: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .story-item-played img {
-  border-radius: 10px;
-  width: 100%;
-  height: auto;
-  transition: transform 0.2s ease;
+border-radius: 10px;
+width: 100%;
+height: auto;
+transition: transform 0.2s ease;
 }
 
 .story-item-played:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+transform: scale(1.05);
+cursor: pointer;
 }
 
 .story-item-played p {
-  margin-top: 10px;
-  font-size: 16px;
-  color: var(--TextColor);
+margin-top: 10px;
+font-size: 16px;
+color: var(--TextColor);
+}
+
+/* Responsive Adjustments */
+
+/* Tablet and below (up to 768px) */
+@media (max-width: 768px) {
+.recently-played h4 {
+  font-size: 1rem; /* Slightly smaller font for heading */
+}
+
+.stories-container {
+  grid-template-columns: repeat(3, 1fr); /* Reduce number of columns */
+  gap: 15px; /* Increase gap for better spacing */
+}
+
+.story-item-played {
+  padding: 12px; /* Increase padding for better touch targets */
+}
+
+.story-item-played p {
+  font-size: 14px; /* Slightly reduce font size for smaller screens */
+}
+}
+
+/* Mobile devices (up to 480px) */
+@media (max-width: 480px) {
+.recently-played h4 {
+  font-size: 0.9rem; /* Reduce font size even more */
+}
+
+.stories-container {
+  grid-template-columns: repeat(2, 1fr); /* Two columns on very small screens */
+  gap: 10px; /* Smaller gap between items */
+}
+
+.story-item-played {
+  padding: 10px; /* Slightly smaller padding */
+}
+
+.story-item-played p {
+  font-size: 12px; /* Smaller text for mobile screens */
+}
 }

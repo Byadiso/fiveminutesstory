@@ -1,20 +1,11 @@
 import React from "react";
-import HeroImage from "../../images/Fiveminutes_hero.jpg";
-import Box from "@mui/material/Box";
-import Fab from "@mui/material/Fab";
-
-import { Link } from "react-router-dom";
-
-import Audio1 from "../../Audio/Audio1.mp3";
-import Audio2 from "../../Audio/Audio2.mp3";
-import Audio3 from "../../Audio/Audio3.mp3";
-import Audio4 from "../../Audio/grateful.mp3";
-import Audio5 from "../../Audio/wepray.mp3";
-
+// import HeroImage from "../../images/Fiveminutes_hero.jpg";
 import AudioPlayerSingle from "../pages/AudioPlayer";
-// import AudioBackgroundImage from "../../images/Fiveminutes_hero.jpg"
+import audioData from "../../Data/AudioData";
 
 function ImageCard({ title, description }) {
+
+     const  HeroImage ="/images/Fiveminutes_hero.jpg"
   const heroStyle = {
     backgroundImage: `url(${HeroImage})`,
     backgroundSize: "cover",
@@ -31,20 +22,26 @@ function ImageCard({ title, description }) {
     borderRadius: "10px",
   };
 
-  const audioFiles = [
-    // Audio1,
-    // Audio2,
-    // Audio3,
-    Audio4,
-    Audio5,
-  ];
+  const titleStyle = {
+    fontSize: "3rem",
+    textAlign: "center",
+    marginBottom: "10px",
+  };
+
+  const descriptionStyle = {
+    fontStyle: "italic",
+    fontSize: "1.2rem",
+    textAlign: "center",
+    marginBottom: "20px",
+  };
 
   return (
     <div className="Hero_section" style={heroStyle}>
-      <h1>{title} </h1>
-      <p><i>{description}</i></p>
-      <AudioPlayerSingle audioFiles={audioFiles} />
-   
+      <h1 style={titleStyle}>{title}</h1>
+      <p style={descriptionStyle}>
+        <i>{description}</i>
+      </p>
+      <AudioPlayerSingle audioFiles={audioData} />
     </div>
   );
 }

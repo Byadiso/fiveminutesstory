@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { isAuthenticated } from "../../firebase/Authentication";
 import NavBar from "./Navbar";
 import ImageCard from "../Modals/ImageCard";
-import storyImage1 from "../../images/Fiveminutes_hero.jpg";
+// import storyImage1 from "../../images/Fiveminutes_hero.jpg";
 import MicNoneIcon from "@mui/icons-material/MicNone";
 import Footer from "./Footer";
 import BookIcon from "@mui/icons-material/Book";
@@ -15,6 +15,8 @@ import Colors from "../../Style/Colors";
 
 function Explore() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
+  const  storyImage1 ="public/images/Fiveminutes_hero.jpg"
 
   useEffect(() => {
     isAuthenticated(setIsLoggedIn);

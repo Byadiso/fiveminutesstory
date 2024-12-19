@@ -1,73 +1,125 @@
 :root {
-    --ButtongColor: #2816E3;
-    --WeakBackgroundColor: #242445;
-    --BackgroundColor: #111120;
-    --TextColor: #8A87B1;
-    --WhiteColor: #f9f9f9;
+  --ButtonColor: #2816E3;
+  --WeakBackgroundColor: #242445;
+  --BackgroundColor: #111120;
+  --TextColor: #8A87B1;
+  --WhiteColor: #f9f9f9;
 }
 
-
 .category-menu {
-    padding: 20px;
-  }
-  
+  padding: 20px;
+  color: var(--WhiteColor);
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  border-bottom: 0.1px solid var(--TextColor);
+  margin-bottom: 10px;
+  gap: 10px; /* Add spacing between menu items */
+}
+
+.menu-item {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  color: var(--TextColor);
+  font-size: 1rem; /* Adjust text size for readability */
+  text-align: center;
+}
+
+.menu-item.active {
+  color: var(--WhiteColor);
+}
+
+.menu-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: var(--TextColor);
+  border-radius: 2px;
+}
+
+.menu-item:hover {
+  color: var(--WhiteColor);
+}
+
+.menu-content h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* Adjust font size for readability */
+}
+
+.stories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  justify-items: center;
+  align-items: start;
+  padding: 10px;
+}
+
+.story-item img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+}
+
+.story-item img:hover {
+  transform: scale(1.03);
+}
+
+.story-item p {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--WhiteColor);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
   .menu-header {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 0.1px solid var(--TextColor);
-    margin-bottom: 10px;
-  }
-  
-  .menu-item {
-    cursor: pointer;
-    padding: 10px;
-    position: relative;
-    color: var(--TextColor);
-  }
-  
-  .menu-item.active {
-    color: var(--WhiteColor);    
-  }
-  
-  .menu-item.active::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background-color: var(--TextColor);
-    border-radius: 2px;
-  }
-  
-  .menu-item:hover {
-    color: var(--WhiteColor);
-  }
-  
-  .menu-content h3 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .stories-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .story-item img {
-    border-radius: 20px;
-    transition: transform 0.2s ease;
-  }
-  
-  .story-item img:hover {
-    transform: scale(1.03);
+      gap: 5px; /* Reduce spacing for smaller screens */
   }
 
-  .story-item p{
-    text-decoration: none;
-    color: var(--WhiteColor);
+  .menu-item {
+      font-size: 0.9rem; /* Reduce text size for smaller screens */
   }
+
+  .stories-container {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust grid for smaller screens */
+  }
+
+  .story-item img {
+      max-width: 150px; /* Reduce image size */
+  }
+
+  .story-item p {
+      font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-header {
+      flex-direction: column; /* Stack menu items vertically */
+      align-items: center;
+      gap: 10px;
+  }
+
+  .stories-container {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Further adjust grid for very small screens */
+  }
+
+  .story-item img {
+      max-width: 120px; /* Reduce image size further */
+  }
+
+  .story-item p {
+      font-size: 0.8rem; /* Adjust font size for readability */
+  }
+}

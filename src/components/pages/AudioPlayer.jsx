@@ -31,12 +31,16 @@ const AudioPlayer = ({ audioFiles }) => {
   }, []);
 
   useEffect(() => {
-    // No autoplay here, just update the source when the track changes
     if (audioRef.current) {
-      audioRef.current.src = audioFiles[currentTrackIndex];
+      audioRef.current.src = audioFiles[currentTrackIndex].path;
       setCurrentTime(0); // Reset time to 0 whenever a new track is loaded
+
+      // Auto-play the audio if it was already playing
+      if (isPlaying) {
+        audioRef.current.play();
+      }
     }
-  }, [currentTrackIndex, audioFiles]);
+  }, [currentTrackIndex, audioFiles, isPlaying]);
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
@@ -84,34 +88,36 @@ const AudioPlayer = ({ audioFiles }) => {
 
   return (
     <div className="audio-player">
-      <audio ref={audioRef} src={audioFiles[currentTrackIndex]} />
+      <audio ref={audioRef} src={audioFiles[currentTrackIndex].path} />
 
       <div className="audio-info">
         <div className="audio-time">
-          <p><i>"This is the best song ..." </i></p>
+          <p>
+            <i>Now Playing: "{audioFiles[currentTrackIndex].name}"</i>
+          </p>
         </div>
       </div>
 
       <div className="controls">
         <button onClick={previousAudioHandler} className="control-btn">
-          <SkipPreviousIcon/>
+          <SkipPreviousIcon />
         </button>
         <button onClick={handleBackward} className="control-btn">
-          <FastRewindIcon/>
+          <FastRewindIcon />
         </button>
         <button onClick={togglePlayPause} className="control-btn">
-          {isPlaying ? <PauseCircleIcon/> : <PlayCircleIcon/>}
+          {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
         </button>
         <button onClick={handleForward} className="control-btn">
-          <FastForwardIcon/>
+          <FastForwardIcon />
         </button>
         <button onClick={nextAudioHandler} className="control-btn">
-          <SkipNextIcon/>
+          <SkipNextIcon />
         </button>
       </div>
 
       <div className="progress-bar-container">
-      <span>{formatTime(currentTime)}</span> {" "}
+        <span>{formatTime(currentTime)}</span>{" "}
         <input
           type="range"
           min="0"
@@ -128,3 +134,4 @@ const AudioPlayer = ({ audioFiles }) => {
 };
 
 export default AudioPlayer;
+

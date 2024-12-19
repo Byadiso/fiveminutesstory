@@ -1,36 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import storyImage1 from "../../images/Fiveminutes_hero.jpg"; // Adjust path as needed
+
 import "../../Style/CategoryContainer.css"; // CSS for styling
+import { menus, storiesByMenu } from "../../Data/MenuData";
 
 const CategoryContainer = () => {
   const [activeMenu, setActiveMenu] = useState("Featured");
 
-  const menus = ["Featured", "New & Notable", "Trending", "For You"];
-  const storiesByMenu = {
-    Featured: Array(10).fill({
-      title: "Featured Story",
-      img: storyImage1,
-      link: "/Playing",
-    }),
-    "New & Notable": Array(10).fill({
-      title: "New & Notable Story",
-      img: storyImage1,
-      link: "/Playing",
-    }),
-    Trending: Array(10).fill({
-      title: "Trending Story",
-      img: storyImage1,
-      link: "/Playing",
-    }),
-    "For You": Array(10).fill({
-      title: "Personalized Story",
-      img: storyImage1,
-      link: "/Playing",
-    }),
-  };
+     const  storyImage1 ="public/images/Fiveminutes_hero.jpg"
 
-  return (
+    return (
     <div className="category-menu">
       {/* Menu Headers */}
       <div className="menu-header">

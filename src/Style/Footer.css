@@ -1,30 +1,16 @@
 *, *::before, *::after {
     box-sizing: border-box;
-}
-
-
-:root {
-
-    --ButtongColor: #2816E3;
-    --WeakBackgroundColor: #242445;    
-    --BackgroundColor: #111120;
-    --TextColor: #8A87B1;
-}
-
-/* all styles  ---------------------------*/
-
-
-* {
-    box-sizing: border-box;
-}
-
-*:focus {
-    outline: none;
-}
-
-
-footer {   
-   
+  }
+  
+  :root {
+      --ButtongColor: #2816E3;
+      --WeakBackgroundColor: #242445;
+      --BackgroundColor: #111120;
+      --TextColor: #8A87B1;
+      --WhiteColor: #f9f9f9;
+  }
+  
+  footer {
     bottom: 0;
     left: 0;
     width: 100%;
@@ -32,20 +18,100 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: var(--blackColor);
-    color: var(--whiteColor);  
-}
-
-.quick_menu p{
-    margin-left: 60px;
-    padding: 20px;
+    background: var(--BackgroundColor);
+    color: var(--WhiteColor);
+    padding: 20px 0;
+  }
+  
+  .quick_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--TextColor);
-}
-
-._menu p:hover{
-    cursor:pointer
-}
-
-footer div {
-    margin-right: 0px;
-}
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .quick_menu a {
+    color: var(--TextColor);
+    margin: 5px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .quick_menu a:hover {
+    color: var(--WhiteColor);
+  }
+  
+  .social_media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .social_media a {
+    color: var(--TextColor);
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .social_media a:hover {
+    color: var(--WhiteColor);
+  }
+  
+  /* Copyright section */
+  .copyright h5 {
+    color: var(--TextColor);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  
+  /* For tablets and below (max-width: 768px) */
+  @media (max-width: 768px) {
+    .quick_menu a {
+      font-size: 0.9rem;
+      margin: 5px 10px;
+    }
+  
+    .social_media a {
+      font-size: 1.3rem;
+      margin: 10px 15px;
+    }
+  
+    .copyright h5 {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* For mobile devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .quick_menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .quick_menu a {
+      margin: 5px 0;
+      font-size: 0.85rem;
+    }
+  
+    .social_media {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .social_media a {
+      margin: 8px 0;
+      font-size: 1.2rem;
+    }
+  
+    .copyright h5 {
+      font-size: 0.7rem;
+    }
+  }
+  

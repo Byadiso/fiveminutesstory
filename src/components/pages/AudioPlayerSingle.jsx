@@ -60,7 +60,7 @@ const AudioPlayersingle = ({ audioSrc }) => {
       className="audio-player"
       style={{ backgroundSize: "cover", backgroundPosition: "center" }}
     >
-      <audio ref={audioRef} src={audioSrc} />
+      <audio ref={audioRef} src={audioSrc.path} />
 
       <div className="audio-info">        
         <div className="audio-time">

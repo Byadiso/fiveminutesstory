@@ -1,55 +1,94 @@
 :root {
-    --ButtongColor: #2816E3;
-    --WeakBackgroundColor: #242445;    
-    --BackgroundColor: #111120;
-    --TextColor: #8A87B1;
-    --WhiteColor: #f9f9f9;
-  
+  --ButtonColor: #2816E3;
+  --WeakBackgroundColor: #242445;    
+  --BackgroundColor: #111120;
+  --TextColor: #8A87B1;
+  --WhiteColor: #f9f9f9;
 }
 
 .story-genres {
-    padding: 20px;
-    text-align: left;
-  }
-  
+  padding: 20px;
+  text-align: left;
+}
+
+.story-genres h4 {
+  margin-left: 0;
+  font-size: 1.2rem;
+  color: var(--WhiteColor);
+}
+
+.story-genres div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.story-genres p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--WhiteColor);
+  background-color: var(--WeakBackgroundColor);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.story-genres p:hover {
+  background-color: var(--TextColor);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.story-genres svg {
+  margin-right: 8px;
+  font-size: 1.5rem;
+  color: var(--WhiteColor);
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
   .story-genres h4 {
-    margin-left: 0;
-    font-size: 1.2rem;
-    color: var(--WhiteColor);
+      font-size: 1.1rem; /* Slightly smaller font for heading */
   }
-  
-  .story-genres div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
+
   .story-genres p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    padding: 10px;
-    font-size: 1rem;
-    color: var(--WhiteColor);
-    background-color: var(--WeakBackgroundColor);
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+      padding: 8px; /* Adjust padding for smaller screens */
   }
-  
-  .story-genres p:hover {
-    background-color: var(--TextColor);
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-  
+
   .story-genres svg {
-    margin-right: 8px;
-    font-size: 1.5rem;
-    color: var(--WhiteColor);
+      font-size: 1.3rem; /* Reduce icon size for smaller screens */
+      margin-right: 5px; /* Adjust margin between icon and text */
   }
-  
+
+  .story-genres div {
+      gap: 10px; /* Reduce gap for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .story-genres h4 {
+      font-size: 1rem; /* Further reduce font size for very small screens */
+  }
+
+  .story-genres p {
+      font-size: 0.8rem; /* Further reduce text size */
+      padding: 6px; /* Further reduce padding */
+  }
+
+  .story-genres svg {
+      font-size: 1.2rem; /* Smaller icon size for very small screens */
+  }
+
+  .story-genres div {
+      gap: 8px; /* Even smaller gap for very small screens */
+  }
+}
