@@ -1,6 +1,6 @@
 import React from "react";
 // import HeroImage from "../../images/Fiveminutes_hero.jpg";
-import AudioPlayerSingle from "../pages/AudioPlayer";
+import AudioPlayer from "../pages/AudioPlayer";
 import audioData from "../../Data/AudioData";
 
 function ImageCard({ title, description }) {
@@ -10,7 +10,7 @@ function ImageCard({ title, description }) {
     backgroundImage: `url(${HeroImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "60vh",
+    height: "85vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -32,16 +32,16 @@ function ImageCard({ title, description }) {
     fontStyle: "italic",
     fontSize: "1.2rem",
     textAlign: "center",
-    marginBottom: "20px",
+    marginBottom: "10px",
   };
 
   return (
     <div className="Hero_section" style={heroStyle}>
-      <h1 style={titleStyle}>{title}</h1>
+      <h6 style={titleStyle}>{title}</h6>
       <p style={descriptionStyle}>
         <i>{description}</i>
       </p>
-      <AudioPlayerSingle audioFiles={audioData} />
+      <AudioPlayer audioFiles={audioData} />
     </div>
   );
 }
