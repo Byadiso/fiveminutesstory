@@ -106,9 +106,9 @@
 
 @media (max-width: 480px) {
   .menu-header {
-      flex-direction: column; /* Stack menu items vertically */
+      flex-direction: row; /* Stack menu items vertically */
       align-items: center;
-      gap: 10px;
+      gap: 5px;
   }
 
   .stories-container {

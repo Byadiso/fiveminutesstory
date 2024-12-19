@@ -2,7 +2,7 @@
 
  const  storyImage1 ="/images/Fiveminutes_hero.jpg"
 // Define the menus and storiesByMenu
-export const menus = ["Featured", "New & Notable", "Trending", "For You"];
+export const menus = ["Featured", "New", "Trending", "For You"];
 
 export const storiesByMenu = {
     Featured: [
@@ -57,7 +57,7 @@ export const storiesByMenu = {
         link: "/Playing",
       },
     ],
-    "New & Notable": [
+    "New": [
       {
         title: "New & Notable Story 1",
         img: storyImage1,

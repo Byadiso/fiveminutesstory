@@ -8,7 +8,7 @@ const RecentlyPlayed = () => {
     { image: "/images/Fiveminutes_hero.jpg", title: "Story Two" },
     { image: "/images/Fiveminutes_hero.jpg", title: "Story Three" },
     { image: "/images/Fiveminutes_hero.jpg", title: "Story Four" },
-    { image: "/images/Fiveminutes_hero.jpg", title: "Story Five" },
+    
   ];
 
   return (

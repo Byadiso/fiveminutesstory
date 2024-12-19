@@ -80,7 +80,7 @@
   
     .social_media a {
       font-size: 1.3rem;
-      margin: 10px 15px;
+      margin: 8px 13px;
     }
   
     .copyright h5 {
@@ -91,7 +91,7 @@
   /* For mobile devices (max-width: 480px) */
   @media (max-width: 480px) {
     .quick_menu {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
     }
   
@@ -101,12 +101,12 @@
     }
   
     .social_media {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
     }
   
     .social_media a {
-      margin: 8px 0;
+      margin: 3px 0;
       font-size: 1.2rem;
     }
   
