@@ -1,23 +1,17 @@
 import React from "react";
 import "../../Style/RecentlyPlayed.css"; // Importing the CSS file
-// import storyImage1 from "../../../"; // Adjust path as needed
+import { Stories } from "../../Data/StoryData";
+
 
 const RecentlyPlayed = () => {
-  const stories = [
-    { image: "/images/Fiveminutes_hero.jpg", title: "The way I heard it" },
-    { image: "/images/Fiveminutes_hero.jpg", title: "Story Two" },
-    { image: "/images/Fiveminutes_hero.jpg", title: "Story Three" },
-    { image: "/images/Fiveminutes_hero.jpg", title: "Story Four" },
-    
-  ];
 
   return (
     <div className="recently-played">
       <h4>Recently Played</h4>
       <div className="stories-container">
-        {stories.map((story, index) => (
+        {Stories.map((story, index) => (
           <div className="story-item-played" key={index}>
-            <img src={story.image} alt={story.title} />
+            <img src={story.image} alt={story.title} style={{width:"185px", height:"190px"}}/>
             <p>{story.title}</p>
           </div>
         ))}
