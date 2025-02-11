@@ -7,7 +7,7 @@ import { menus, storiesByMenu } from "../../Data/MenuData";
 const CategoryContainer = () => {
   const [activeMenu, setActiveMenu] = useState("Featured");
 
-     const  storyImage1 ="public/images/Fiveminutes_hero.jpg"
+  
 
     return (
     <div className="category-menu">
